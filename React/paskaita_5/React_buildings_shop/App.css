@@ -1,0 +1,37 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.images img {
+  height: 200px;
+}
+
+.App {
+  padding: 50px;
+}
+
+.building {
+  padding: 10px;
+  background-color: #ececec;
+  width: 300px;
+}
+
+.building img {
+  width: 100%;
+}

@@ -1,0 +1,68 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.images img {
+  height: 200px;
+}
+
+.App {
+  padding: 50px;
+}
+
+.building {
+  padding: 10px;
+  background-color: #ececec;
+  width: 300px;
+}
+
+.building img {
+  width: 100%;
+}
+
+.smallImages img {
+  height: 100px;
+}
+
+
+.post {
+  padding: 20px;
+}
+
+.messages {
+  height: 500px;
+}
+
+.user img {
+  height: 100px;
+}
+
+.board {
+  width: 900px;
+}
+
+.board img {
+  width: 90px;
+  border: 3px solid white;
+  box-sizing:border-box;
+}

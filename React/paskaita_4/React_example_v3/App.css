@@ -1,0 +1,49 @@
+.d-flex  {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+
+
+
+.toolbar {
+  background-color: black;
+  color: white;
+}
+
+.toolbar > div {
+  margin: 10px;
+}
+
+.sidebar {
+  text-align: center;
+  background-color: #e3e3e3;
+}
+
+.sidebar > div {
+  padding: 20px;
+}
+
+.product img {
+  width: 300px;
+}
+
+.post {
+  padding: 20px;
+  margin: 20px;
+}
+
+.post img {
+  width: 300px;
+}

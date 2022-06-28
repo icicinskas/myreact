@@ -1,0 +1,38 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.App {
+  padding: 50px;
+}
+
+.progressWrapper {
+  height: 20px;
+  width: 400px;
+  background-color: #f3f3f3;
+}
+
+.progressWrapper div {
+  background-color: #78c953;
+  height: 100%;
+}

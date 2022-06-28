@@ -1,0 +1,26 @@
+.d-flex  {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+
+.App {
+  padding: 200px;
+}
+
+.colorBox {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
