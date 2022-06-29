@@ -1,41 +1,29 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const Bars = () => {
-  const [getLetter, setLetter] = useState(0);
-  const [getColor, setColor] = useState("green");
-  const inp = useRef();
-  function addLetter() {
-    setLetter(inp.current.value.length);
-  }
+const Bars = ({ users }) => {
+  const [getPercent, setPercent] = useState(0);
+  const [getColor, setColor] = useState("#79cc46");
 
-  useEffect(
-    (addColor) => {
-      if (getLetter > 100 && getLetter < 180) setColor("yellow");
-      if (getLetter > 180) setColor("red");
-    },
-    [getLetter]
-  );
+  useEffect(() => {
+    setPercent(users.length * 2);
+  }, [users]);
+
+  useEffect(() => {
+    if (getPercent > 50) setColor("#e7d24c");
+    if (getPercent > 90) setColor("#e7594c");
+  }, [getPercent]);
 
   return (
-    <div>
-      <div className="bar-box">
+    <div className="bar-box">
+      <div className="bar-border">
         <div
-          style={{ background: getColor, width: getLetter }}
+          style={{ background: getColor, height: getPercent + "%" }}
           className="bar"
         ></div>
       </div>
-
-      <div>
-        <h2>Count:{getLetter} </h2>
-      </div>
-
-      <div>
-        <input
-          onChange={addLetter}
-          type="text"
-          placeholder="Enter some text"
-          ref={inp}
-        />
+      <div className="bar-title">
+        <h2>50 users</h2>
+        <h2>0 users</h2>
       </div>
     </div>
   );

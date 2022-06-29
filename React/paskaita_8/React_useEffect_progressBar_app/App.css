@@ -1,0 +1,66 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.App {
+  padding: 50px;
+}
+
+.table {
+  background-color: #e7e7e7;
+  height: 400px;
+  width: 100%;
+  overflow: auto;
+}
+
+.footer {
+  padding: 10px;
+  background-color: #e7e7e7;
+  margin-top: 10px;
+}
+
+.progressWrapper {
+  height: 400px;
+  width: 200px;
+  background-color: #e7e7e7;
+}
+
+.progressBar {
+  background-color: #79cc46;
+}
+
+.userCard {
+  margin: 10px;
+  border-bottom: 1px solid black;
+  height: 100px;
+  align-items: center;
+}
+
+.userCard img {
+  margin-right: 20px;
+  height: 100%;
+}
