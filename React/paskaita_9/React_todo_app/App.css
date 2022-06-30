@@ -1,0 +1,38 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.App {
+  padding: 50px;
+}
+
+.table {
+  background-color: #e7e7e7;
+  height: 400px;
+  width: 300px;
+  overflow: auto;
+}
