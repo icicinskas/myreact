@@ -1,0 +1,90 @@
+.d-flex {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.a-item-c {
+  align-items: center;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.m50 {
+  margin: 50px;
+}
+/* 
+* {
+  margin: 0;
+  padding: 0;
+} */
+
+.app {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.shop {
+  width: 50%;
+  margin-left: 5px;
+}
+
+.shop-btn {
+  border: 1px solid lightgray;
+  display: flex;
+}
+
+.shop-btn button {
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+}
+
+.inv {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.inv-top h3 {
+  border: 1px solid lightgray;
+  text-align: left;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.table {
+  height: 80vh;
+  border: 1px solid lightgray;
+}
+
+.weapons {
+  display: flex;
+  gap: 20px;
+}
+
+.weapons img {
+  width: 100px;
+}

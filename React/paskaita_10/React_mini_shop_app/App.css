@@ -1,0 +1,65 @@
+.d-flex  {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grow1 {
+  flex: 1
+}
+
+.grow3 {
+  flex: 3
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.App {
+  padding: 50px;
+}
+
+
+.shop {
+  padding: 10px;
+  background-color: #dedede;
+}
+
+.item {
+  background-color: #d3d3d3;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.inventory {
+  background-color: #d1e0d6;
+  height: 100%;
+}
+
+.goldStats {
+  font-size: 30px;
+  font-weight: bold;
+}

@@ -29,127 +29,196 @@
 .m50 {
   margin: 50px;
 }
-/* 
+
 * {
   margin: 0;
   padding: 0;
-} */
+}
 
 .app {
   display: flex;
+}
+
+.main {
+  background: ghostwhite;
+  border: 1px solid gray;
+  height: 100vh;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  margin-top: 40px;
-}
-
-.main-box {
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  background: rgb(239, 239, 239);
-  box-shadow: 0 0 3px grey;
-  width: 600px;
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 10px 0;
-}
-
-.nav-btn {
-  border: 4px ridge rgb(240, 240, 240);
-  width: 155px;
-  padding: 5px;
-}
-
-.nav-btn:hover {
-  cursor: pointer;
-  background: lightgreen;
-}
-
-main {
-  background: rgb(241, 240, 240);
-  box-shadow: 0 0 3px grey;
-  width: 600px;
-  height: 400px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
   overflow: auto;
 }
 
-.table {
+.nav {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  gap: 50px;
 }
 
-.display-task {
+.nav button {
+  background: lavender;
+  border-radius: 6px;
+  border: 2px solid rgb(199, 199, 238);
+  color: rgb(119, 36, 196);
+  cursor: pointer;
+  font-weight: 700;
+  width: 350px;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
-.task-text {
-  width: 100%;
+.nav button:hover {
+  background: transparent;
 }
 
-.show-tasks {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid grey;
-}
-
-.manage-task {
-  display: flex;
-  gap: 5px;
-}
-
-.date {
-  font-size: 0.8em;
-}
-
-.cmpl {
+.cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 60px;
+  flex-wrap: wrap;
 }
 
-.check {
-  background: blue;
-  cursor: pointer;
-  width: 25px;
-  display: block;
-}
-
-.dlt {
-  text-align: center;
-  width: 60px;
-}
-
-.delete {
-  cursor: pointer;
-  width: 25px;
-}
-
-footer {
-  background: rgb(239, 239, 239);
-  box-shadow: 0 0 3px grey;
-  width: 600px;
+.cards-fav {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10px 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: right;
 }
 
-.footer-btn {
-  border-radius: 6px;
-  border: 2px solid grey;
-  background: rgb(252, 248, 248);
+.close-btn {
+  display: flex;
+  justify-content: end;
+}
+
+.close-btn button {
+  font-size: 1.5em;
+  margin-right: 4px;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  color: rgb(103, 182, 182);
   cursor: pointer;
-  margin-right: 20px;
-  padding: 5px 15px;
+  border-radius: 3px;
+  width: 20px;
+  font-weight: 800;
 }
 
-textarea {
-  margin-left: 10px;
+.cards-box {
+  cursor: pointer;
+  border: 1px solid gray;
+  background: rgb(251, 251, 251);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 155px;
+  height: 42vh;
+  margin: 5px;
+}
+
+.cards-box-fav {
+  background: rgb(238, 255, 255);
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.fav-body {
+  display: flex;
+}
+
+.img img {
+  width: 155px;
+  height: 20vh;
+  overflow: hidden;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.img-fav img {
+  width: 155px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.img {
+  height: 20vh;
+}
+
+.title {
+  margin-top: 10px;
+  height: 20vh;
+}
+
+.title-fav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  height: 20vh;
+}
+
+.btn-fav {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-fav button {
+  background: rgb(194, 233, 247);
+  border: 2px solid rgb(112, 205, 236);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.btn-fav button:hover {
+  background: transparent;
+}
+
+.title span {
+  color: rgb(0, 0, 0);
+}
+
+.star-svg {
+  width: 20px;
+  height: 20px;
+  margin: 10px 0;
+}
+
+h5 {
+  color: grey;
+  margin: 5px 0;
+  padding: 3px;
+}
+
+h6 {
+  padding-left: 3px;
+}
+
+.h6 {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  padding-left: 3px;
+}
+
+p {
+  font-size: 0.7em;
+  margin: 20px 0;
 }
