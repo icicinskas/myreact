@@ -22,12 +22,20 @@
   flex: 3;
 }
 
+.g-5 {
+  gap: 5px;
+}
+
 .g40 {
   gap: 40px;
 }
 
 .m50 {
   margin: 50px;
+}
+
+.over {
+  overflow: auto;
 }
 
 * {
@@ -37,188 +45,118 @@
 
 .app {
   display: flex;
+  flex-direction: column;
 }
 
 .main {
-  background: ghostwhite;
-  border: 1px solid gray;
-  height: 100vh;
+  width: 100%;
+  height: 80%;
+}
+
+.toolbar {
+  background: rgb(143, 194, 214);
+  color: white;
+  font-size: 1.2em;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.aside {
+  background: lightblue;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+
+  height: 80vh;
+  gap: 20px;
+}
+
+.footer {
+  background: rgb(143, 194, 214);
+  color: white;
+  font-size: 1.2em;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 50px;
+  font-size: 1.5em;
+}
+
+.aside a {
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.aside button {
+  width: 100px;
+  margin: auto;
+}
+
+.profile {
   flex-wrap: wrap;
-  padding: 10px;
+}
+
+.profile-box {
+  background: lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 220px;
+  height: 180px;
+  padding: 20px;
+}
+
+.contant {
   overflow: auto;
 }
 
-.nav {
-  display: flex;
-  gap: 50px;
-}
-
-.nav button {
-  background: lavender;
-  border-radius: 6px;
-  border: 2px solid rgb(199, 199, 238);
-  color: rgb(119, 36, 196);
-  cursor: pointer;
-  font-weight: 700;
-  width: 350px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.nav button:hover {
-  background: transparent;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.cards-fav {
-  background: transparent;
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  bottom: 0;
+.contant-box {
+  background: #eeeeee;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  text-align: right;
-}
-
-.close-btn {
-  display: flex;
-  justify-content: end;
-}
-
-.close-btn button {
-  font-size: 1.5em;
-  margin-right: 4px;
-}
-
-.close {
-  background: transparent;
-  border: none;
-  color: rgb(103, 182, 182);
-  cursor: pointer;
-  border-radius: 3px;
-  width: 20px;
-  font-weight: 800;
-}
-
-.cards-box {
-  cursor: pointer;
-  border: 1px solid gray;
-  background: rgb(251, 251, 251);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  width: 155px;
-  height: 42vh;
+  gap: 5px;
   margin: 5px;
 }
 
-.cards-box-fav {
-  background: rgb(238, 255, 255);
-  width: 500px;
-  height: 500px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-}
-
-.fav-body {
-  display: flex;
-}
-
-.img img {
-  width: 155px;
-  height: 20vh;
-  overflow: hidden;
-  object-fit: contain;
-  margin-top: 10px;
-}
-
-.img-fav img {
-  width: 155px;
-  object-fit: cover;
-  margin: 10px;
-}
-
-.img {
-  height: 20vh;
-}
-
-.title {
-  margin-top: 10px;
-  height: 20vh;
-}
-
-.title-fav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  height: 20vh;
-}
-
-.btn-fav {
+.div-box {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.btn-fav button {
-  background: rgb(194, 233, 247);
-  border: 2px solid rgb(112, 205, 236);
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-.btn-fav button:hover {
-  background: transparent;
-}
-
-.title span {
-  color: rgb(0, 0, 0);
-}
-
-.star-svg {
-  width: 20px;
-  height: 20px;
-  margin: 10px 0;
-}
-
-h5 {
-  color: grey;
-  margin: 5px 0;
-  padding: 3px;
-}
-
-h6 {
-  padding-left: 3px;
-}
-
-.h6 {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
-  padding-left: 3px;
-}
-
-p {
-  font-size: 0.7em;
-  margin: 20px 0;
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid gray;
 }
