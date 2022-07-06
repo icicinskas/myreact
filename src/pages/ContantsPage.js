@@ -9,18 +9,20 @@ const ContantsPage = () => {
     fetch("https://jsonplaceholder.typicode.com/comments")
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setContant(data);
       });
-  });
+  }, []);
 
   function goToPost(id) {
     nav("/post/" + id);
+    console.log(id);
   }
 
   return (
     <div className="contant">
-      {contant.map((x) => (
-        <div onClick={() => goToPost(x.postId)} className="contant-box">
+      {contant.map((x, i) => (
+        <div key={i} onClick={() => goToPost(x.postId)} className="contant-box">
           <h3>{x.name}</h3>
           <div>{x.email}</div>
           <p>{x.body}</p>

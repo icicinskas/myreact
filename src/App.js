@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import PostPage from "./pages/Postpage";
+import NewPage from "./pages/NewPage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -25,15 +26,17 @@ function App() {
 
             <Route path="/profile" element={<ProfilePage />} />
 
-            <Route path="/user/:name" element={<UserPage />} />
+            <Route path="/user/:userName" element={<UserPage />} />
 
             <Route path="/contants" element={<ContantsPage />} />
 
-            <Route path="/post/id" element={<PostPage />} />
+            <Route path="/post/:id" element={<PostPage />} />
 
             <Route path="/gallery" element={<GalleryPage />} />
 
             <Route path="/home/:color" element={<HomePage />} />
+
+            <Route path="/new/:postId" element={<NewPage />} />
           </Routes>
         </div>
         <Footer />

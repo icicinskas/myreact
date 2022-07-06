@@ -39,6 +39,7 @@ const Aside = () => {
         <button onClick={goToProfile}>Go To Profile Page</button>
         <button onClick={goToUser}>Go To User Page</button>
         <button onClick={goToContants}>Go To Contants Page</button>
+        <button onClick={goToPost}>Go To Post Page</button>
         <button onClick={goToGallery}>Go To Gallery Page</button>
         <button onClick={goToHome}>Go To Home Page</button>
       </div>

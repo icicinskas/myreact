@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const UserPage = () => {
-  const { username } = useParams();
+  const { userName } = useParams();
 
   const [profile, setProfile] = useState([]);
 
@@ -15,22 +15,23 @@ const UserPage = () => {
   }, []);
 
   function addUser() {
-    return profile.find((x) => x.username === username);
+    return profile.find((x) => x.username === userName);
   }
 
   const myUser = addUser();
 
   return (
-    <div className="profile d-flex">
-      <h1>{username}</h1>
+    <div className="profile d-flex m20 fl-col g5">
+      <div>{userName}</div>
       {myUser ? (
         <div className="profile-box">
           <h3>{myUser.name}</h3>
-          <h4>{myUser.username}</h4>
+          <h4>{myUser.phone}</h4>
+          <div>{myUser.website}</div>
           <div>{myUser.email}</div>
         </div>
       ) : (
-        <div>USER DOES NOT EXIST</div>
+        <div className="profile-box">There are not such user</div>
       )}
     </div>
   );
