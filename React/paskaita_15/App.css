@@ -1,0 +1,129 @@
+.d-flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.a-item-c {
+  align-items: center;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g5 {
+  gap: 5px;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.over {
+  overflow: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar-box {
+  background: #eeeeee;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.toolbar-box a {
+  width: 70px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0 50px;
+  padding: 5px;
+}
+
+.register {
+  box-shadow: 0 0 8px grey;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 50px auto;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px;
+}
+
+.input input {
+  height: 30px;
+  width: 320px;
+}
+
+.reg-btn button {
+  margin: 20px;
+  padding: 5px;
+}
+
+.login {
+  box-shadow: 0 0 8px grey;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 50px auto;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px;
+  gap: 30px;
+}
+
+.img img {
+  border-radius: 120px;
+  border: 3px solid gray;
+  object-position: center;
+  object-fit: contain;
+}

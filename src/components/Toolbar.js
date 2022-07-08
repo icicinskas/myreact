@@ -1,12 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Toolbar = () => {
+const Toolbar = (setValid) => {
   return (
     <div className="toolbar">
-      <div>
-        <Link to="/"> &lArr; </Link>
-      </div>
+      {setValid ? (
+        <div className="toolbar-box">
+          <Link to="/login">Posts</Link>
+          <Link to="/register"> User </Link>
+
+          <div className="toolbar-box">
+            <Link to="/login">LOGOUT</Link>
+          </div>
+        </div>
+      ) : (
+        <div className="toolbar-box">
+          <Link to="/login">LOGIN</Link>
+          <Link to="/register"> Register </Link>
+        </div>
+      )}
     </div>
   );
 };

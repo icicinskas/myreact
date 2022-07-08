@@ -1,0 +1,174 @@
+.d-flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.a-item-c {
+  align-items: center;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g5 {
+  gap: 5px;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.over {
+  overflow: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  height: 80%;
+}
+
+.toolbar {
+  background: rgb(143, 194, 214);
+  color: white;
+  font-size: 1.2em;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.aside {
+  background: lightblue;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+
+  height: 80vh;
+  gap: 20px;
+}
+
+.footer {
+  background: rgb(143, 194, 214);
+  color: white;
+  font-size: 1.2em;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 50px;
+  font-size: 1.5em;
+}
+
+.aside a {
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.aside button {
+  width: 100px;
+  margin: auto;
+}
+
+.profile {
+  flex-wrap: wrap;
+}
+
+.profile-box {
+  background: lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 220px;
+  height: 180px;
+  padding: 20px;
+}
+
+.contant {
+  overflow: auto;
+}
+
+.contant-box {
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px;
+}
+
+.div-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid gray;
+}
