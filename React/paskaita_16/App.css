@@ -1,0 +1,75 @@
+.d-flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.a-item-c {
+  align-items: center;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g5 {
+  gap: 5px;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.over {
+  overflow: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+}
+
+.app div {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 5px grey;
+  box-sizing: border-box;
+}
+
+.selected {
+  background: yellowgreen;
+}
