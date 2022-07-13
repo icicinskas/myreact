@@ -1,36 +1,58 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import AllPostPage from "./pages/AllPostPage";
+import CreatePostPage from "./pages/CreatePostPage";
+import PostPage from "./pages/PostPage";
 
 import mainContext from "./context/mainContext";
+import Toolbar from "./components/Toolbar";
 
 function App() {
-  const [posts, setPost] = useState([
-    {
-      image:
-        "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      title: "katinas",
-    },
-  ]);
-  const [color, setColor] = useState("lightgray");
-  const [row, setRow] = useState(true);
+  const [error, setError] = useState(null);
+  const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [commets, setComments] = useState([]);
+  const [valited, setValited] = useState(false);
 
   const state = {
+    error,
+    setError,
+    users,
+    setUsers,
     posts,
-    setPost,
-    color,
-    setColor,
-    row,
-    setRow,
+    setPosts,
+    commets,
+    setComments,
+    valited,
+    setValited,
   };
+
+  function addNewUser(item) {
+    const user = {
+      email: item.email,
+      password: item.passOne,
+    };
+
+    setUsers([...users, user]);
+  }
 
   return (
     <mainContext.Provider value={state}>
       <div className="app">
         <BrowserRouter>
+          <Toolbar />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<LoginPage />} />
+            <Route
+              path="/register"
+              element={<RegisterPage addNewUser={addNewUser} />}
+            />
+            <Route path="/allPosts" element={<AllPostPage />} />
+            <Route path="/createPost" element={<CreatePostPage />} />
+            <Route path="/post/:id" element={<PostPage />} />
           </Routes>
         </BrowserRouter>
       </div>

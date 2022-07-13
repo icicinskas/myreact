@@ -10,6 +10,14 @@
   justify-content: space-between;
 }
 
+.s-around {
+  justify-content: space-around;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
 .a-c {
   align-items: center;
 }
@@ -74,34 +82,106 @@
   cursor: pointer;
 }
 
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.home {
+.app {
+  background: lightsteelblue;
+  height: 100vh;
+}
+
+.toolbar {
+  background: #7e9bd6;
+  padding: 10px;
+}
+
+.toolbar button {
+  cursor: pointer;
+  padding: 3px;
+}
+
+.toolbar-main {
+  justify-content: end;
+}
+
+.login-box {
+  border: 1px solid gray;
+  width: 400px;
+  height: 300px;
   display: flex;
-  margin: 10px;
-  gap: 10px;
-}
-
-.left {
-  border: 1px solid gray;
-}
-
-.right {
-  border: 1px solid gray;
   flex-direction: column;
+  background: #c8e3ee;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
 }
 
-.color {
-  margin: 50px 10px;
+.login-box input {
+  padding: 5px;
+}
+
+.login-box button {
+  padding: 5px;
+}
+
+.register-box {
+  border: 1px solid gray;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #c8e3ee;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.register-box input {
+  padding: 5px;
+}
+
+.register-box button {
+  padding: 5px;
+}
+
+.create-post {
+  border: 1px solid gray;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #c8e3ee;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.create-post input {
+  padding: 5px;
+}
+
+.create-post button {
+  padding: 5px;
 }
 
 .post {
+  cursor: pointer;
+  background: #a6bce9;
+  box-shadow: 0 0 4px #7e9bd6;
   border: 1px solid grey;
   text-align: center;
-  height: 250px;
+  height: 300px;
+  margin: 5px;
 }
 
 .post img {

@@ -1,0 +1,111 @@
+.d-flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.s-btw {
+  justify-content: space-between;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g5 {
+  gap: 5px;
+}
+
+.g10 {
+  gap: 10px;
+}
+
+.g15 {
+  gap: 15px;
+}
+
+.g20 {
+  gap: 20px;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.m5-a {
+  margin: 5px auto;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.over {
+  overflow: auto;
+}
+
+.pntr {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+}
+
+.left {
+  border: 1px solid gray;
+}
+
+.right {
+  border: 1px solid gray;
+  flex-direction: column;
+}
+
+.color {
+  margin: 50px 10px;
+}
+
+.post {
+  border: 1px solid grey;
+  text-align: center;
+  height: 250px;
+}
+
+.post img {
+  width: 150px;
+  height: 200px;
+  margin: 5px;
+}

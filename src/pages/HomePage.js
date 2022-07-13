@@ -1,20 +1,10 @@
 import React from "react";
-import ShowPosts from "../components/ShowPosts";
-import Inputs from "../components/Inputs";
-import Toogle from "../components/Toogle";
-import Color from "../components/Color";
 
 const HomePage = () => {
   return (
-    <div className="home">
-      <div className="left d-flex grow3">
-        <ShowPosts />
-      </div>
-
-      <div className="right d-flex grow1">
-        <Inputs />
-        <Color />
-        <Toogle />
+    <div className="home d-flex">
+      <div className="right d-flex fl-col grow3 m10 g5">
+        <div className="box d-flex g5"></div>
       </div>
     </div>
   );
