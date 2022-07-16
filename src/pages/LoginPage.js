@@ -1,13 +1,10 @@
-import { useContext } from "react";
-import mainContext from "../context/mainContext";
 import PostCard from "../components/PostCard";
 
 const LoginPage = ({ characters }) => {
-  const {} = useContext(mainContext);
   return (
-    <div className="d-flex wrap-flex">
-      {characters.map((x, i) => (
-        <PostCard key={i} item={x} />
+    <div className="d-flex wrap-flex char">
+      {characters.map((x) => (
+        <PostCard key={x.race} char={x} />
       ))}
     </div>
   );

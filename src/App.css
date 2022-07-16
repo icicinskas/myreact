@@ -58,6 +58,10 @@
   margin: 5px auto;
 }
 
+.m5 {
+  margin: 5px;
+}
+
 .m10 {
   margin: 10px;
 }
@@ -68,6 +72,14 @@
 
 .m50 {
   margin: 50px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mv10 {
+  margin: 0 10px;
 }
 
 .p5 {
@@ -98,6 +110,7 @@
 .app {
   background: lightsteelblue;
   height: 100vh;
+  padding: 10px;
 }
 
 .toolbar {
@@ -105,27 +118,218 @@
   padding: 10px;
 }
 
+.toolbar a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+.toolbar-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .toolbar button {
+  border: 1px solid #5983d6;
+  border-radius: 4px;
+  background: #5983d6;
+  color: #551a88;
+  font-weight: 700;
   cursor: pointer;
-  padding: 3px;
+  padding: 5px;
+}
+
+.toolbar button:hover {
+  background: transparent;
+}
+
+.gold {
+  color: #551a88;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.w-btn {
+  cursor: pointer;
+  background: rgb(59, 73, 150);
+  border: 1px solid rgb(59, 73, 150);
+  color: white;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.w-btn:hover {
+  background: transparent;
+  color: darkslateblue;
+}
+
+.p-btn {
+  cursor: pointer;
+  background: rgb(59, 73, 150);
+  border: 1px solid rgb(59, 73, 150);
+  color: white;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.p-btn:hover {
+  background: transparent;
+  color: darkslateblue;
 }
 
 .toolbar-main {
   justify-content: end;
 }
 
+.char {
+  margin-top: 50px;
+  margin: auto;
+}
+
 .post {
   cursor: pointer;
   background: #a6bce9;
-  box-shadow: 0 0 4px #7e9bd6;
+  box-shadow: 0 0 4px blue;
   border: 1px solid grey;
+  border-radius: 8px;
   text-align: center;
-  height: 100%;
+  height: 360px;
   width: 200px;
-  margin: 5px;
+  margin: 5px auto;
+}
+
+.player-hp-border {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  height: 15px;
+  width: 250px;
+  border: 2px solid blue;
+}
+
+.player-hp {
+  width: 100%;
+  height: 15px;
+  background: green;
+  border-radius: 8px;
 }
 
 .post img {
   width: 100%;
+  margin: 5px auto;
+}
+
+.weapon {
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background: #96b0e2;
+  width: 300px;
+}
+
+.weapon img,
+.potion img {
+  border-radius: 8px;
+}
+
+.potion {
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background: #96b0e2;
+  width: 300px;
+}
+
+.shop {
+  height: 90vh;
+  overflow: auto;
+}
+
+.shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  height: 40px;
+  margin: 5px 0;
+}
+
+.inventory {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 0 5px blue;
+  margin-top: 5px;
+  overflow: auto;
+}
+
+.inventory img {
+  border-radius: 8px;
+}
+
+.inv-box {
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background: #96b0e2;
+  width: 300px;
   margin: 5px;
+}
+
+.arena {
+  border: 1px solid blue;
+  box-shadow: 0 0 15px blue;
+  border-radius: 8px;
+  width: 800px;
+  height: 70vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.attack {
+  cursor: pointer;
+  background: rgb(212, 0, 255);
+  color: white;
+  font-size: 1.1em;
+  border: 1px solid rgb(212, 0, 255);
+  border-radius: 8px;
+  padding: 8px;
+  width: 100px;
+}
+
+.attack:hover {
+  background: #cc86dd;
+}
+
+.monster-hp-border {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  height: 15px;
+  width: 250px;
+  border: 2px solid blue;
+}
+
+.monster-hp {
+  width: 100%;
+  height: 15px;
+  background: green;
+  border-radius: 8px;
+}
+
+.inv-btn {
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 6px;
+  width: 250px;
+}
+
+.inv-btn:hover {
+  background: grey;
 }

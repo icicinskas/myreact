@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 import ArenaPage from "./pages/ArenaPage";
@@ -11,13 +11,21 @@ import Toolbar from "./components/Toolbar";
 
 function App() {
   const [error, setError] = useState(null);
-  const [users, setUsers] = useState([]);
+  const [player, setPlayer] = useState([]);
+  const [inventory, setInventory] = useState([]);
+  const [gold, setGold] = useState(0);
+
+  console.log(inventory);
 
   const state = {
     error,
     setError,
-    users,
-    setUsers,
+    player,
+    setPlayer,
+    inventory,
+    setInventory,
+    gold,
+    setGold,
   };
 
   const characters = [
@@ -1167,8 +1175,13 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginPage characters={characters} />} />
             <Route path="/main" element={<MainPage />} />
-            <Route path="/shop" element={<ShopPage />} />
-            <Route path="/arena" element={<ArenaPage />} />
+            <Route
+              path="/shop"
+              element={
+                <ShopPage weapons={trader.weapons} potions={trader.potions} />
+              }
+            />
+            <Route path="/arena" element={<ArenaPage monsters={monsters} />} />
           </Routes>
         </BrowserRouter>
       </div>
