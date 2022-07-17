@@ -12,7 +12,7 @@ const MainPage = () => {
         <PostCard char={player} />
       </div>
 
-      <div className=" d-flex grow3 jc-c m5-a mv10">
+      <div className="main-inv d-flex grow3 jc-c m5-a mv10">
         <InventoryBox />
       </div>
     </div>

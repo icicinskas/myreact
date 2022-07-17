@@ -17,22 +17,24 @@ const ShopPage = ({ weapons, potions }) => {
             Potion
           </button>
         </div>
-        {change && (
-          <div className="d-flex wrap-flex g5">
-            {weapons.map((x, i) => (
-              <WeaponCard item={x} key={i} location="shop" />
-            ))}
-          </div>
-        )}
-        {!change && (
-          <div className="d-flex wrap-flex g5">
-            {potions.map((x, i) => (
-              <PotionCard item={x} key={i} location="shop" />
-            ))}
-          </div>
-        )}
+        <div className="shop-items">
+          {change && (
+            <div className="d-flex wrap-flex g5">
+              {weapons.map((x, i) => (
+                <WeaponCard item={x} key={i} location="shop" />
+              ))}
+            </div>
+          )}
+          {!change && (
+            <div className="d-flex wrap-flex g5">
+              {potions.map((x, i) => (
+                <PotionCard item={x} key={i} location="shop" />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-      <div className="d-flex grow1">
+      <div className="shop-inv d-flex grow1">
         <InventoryBox />
       </div>
     </div>

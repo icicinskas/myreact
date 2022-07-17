@@ -8,7 +8,7 @@ const InventoryBox = () => {
   return (
     <div className="inventory">
       {inventory.map((x, i) => (
-        <div className="d-flex wrap-flex">
+        <div className="single">
           <SingleItem item={x} key={i} index={i} location="inventory" />
         </div>
       ))}

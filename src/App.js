@@ -14,8 +14,19 @@ function App() {
   const [player, setPlayer] = useState([]);
   const [inventory, setInventory] = useState([]);
   const [gold, setGold] = useState(0);
-
-  console.log(inventory);
+  const [modal, setModal] = useState(false);
+  const [weapon, setWeapon] = useState({
+    image:
+      "https://flyclipart.com/thumb2/question-mark-png-images-free-download-507170.png",
+  });
+  const [monster, setMonster] = useState([]);
+  const [items, setItems] = useState("");
+  const [atk, setAtk] = useState(null);
+  const [monsterHp, setMonsterHp] = useState(100);
+  const [playerHp, setPlayerHp] = useState(100);
+  const [monsterAtk, setMonsterAtk] = useState(0);
+  const [playerHelth, setPlayerHelth] = useState();
+  const [monsterHelth, setMonsterHelth] = useState();
 
   const state = {
     error,
@@ -26,6 +37,26 @@ function App() {
     setInventory,
     gold,
     setGold,
+    modal,
+    setModal,
+    weapon,
+    setWeapon,
+    monster,
+    setMonster,
+    items,
+    setItems,
+    atk,
+    setAtk,
+    monsterHp,
+    setMonsterHp,
+    monsterHelth,
+    setMonsterHelth,
+    playerHp,
+    setPlayerHp,
+    playerHelth,
+    setPlayerHelth,
+    monsterAtk,
+    setMonsterAtk,
   };
 
   const characters = [
@@ -1171,7 +1202,7 @@ function App() {
     <mainContext.Provider value={state}>
       <div className="app">
         <BrowserRouter>
-          <Toolbar />
+          <Toolbar monsters={monsters} />
           <Routes>
             <Route path="/" element={<LoginPage characters={characters} />} />
             <Route path="/main" element={<MainPage />} />
@@ -1181,7 +1212,10 @@ function App() {
                 <ShopPage weapons={trader.weapons} potions={trader.potions} />
               }
             />
-            <Route path="/arena" element={<ArenaPage monsters={monsters} />} />
+            <Route
+              path="/arena"
+              element={<ArenaPage dropItems={dropItems} />}
+            />
           </Routes>
         </BrowserRouter>
       </div>
