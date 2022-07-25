@@ -153,36 +153,3 @@
   font-size: 1.2em;
 }
 
-.display {
-  border: 1px solid gray;
-  height: 100%;
-}
-
-.box {
-  border-radius: 4px;
-  gap: 10px;
-  margin: 5px;
-}
-
-.box-reserv {
-  margin-top: 20px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.box-top {
-  cursor: pointer;
-  border: 1px solid grey;
-  box-shadow: 0 0 5px blue;
-  width: 120px;
-  height: 80px;
-}
-
-.box-top:hover {
-  background: #5983d6;
-}
-
-.box-inside {
-  display: flex;
-  margin: auto;
-}

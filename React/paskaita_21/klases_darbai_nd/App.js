@@ -1,10 +1,11 @@
 import "./App.css";
-import NextPage from "./pages/NextPage";
+
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <div className="app">
-      <NextPage />
+      <MainPage />
     </div>
   );
 }

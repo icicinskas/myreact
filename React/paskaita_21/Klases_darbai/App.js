@@ -1,10 +1,10 @@
 import "./App.css";
-import NextPage from "./pages/NextPage";
+import IndexPage from "./pages/IndexPage";
 
 function App() {
   return (
     <div className="app">
-      <NextPage />
+      <IndexPage />
     </div>
   );
 }
