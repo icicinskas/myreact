@@ -58,8 +58,12 @@
   gap: 40px;
 }
 
-.m5-a {
-  margin: 5px auto;
+.g50 {
+  gap: 50px;
+}
+
+.m-a {
+  margin: auto;
 }
 
 .m5 {
@@ -114,7 +118,6 @@
 .app {
   background: lightsteelblue;
   height: 100vh;
-  padding: 10px;
 }
 
 .toolbar {
@@ -138,51 +141,104 @@
   border-radius: 4px;
   background: #5983d6;
   color: #551a88;
+  font-size: 1em;
   font-weight: 700;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
 }
 
 .toolbar button:hover {
   background: transparent;
 }
 
-.gold {
-  color: #551a88;
-  font-weight: 900;
-  font-size: 1.2em;
+.toolbar-main {
+  width: 100%;
+  justify-content: space-around;
 }
 
-.display {
-  border: 1px solid gray;
-  height: 100%;
-}
-
-.box {
-  border-radius: 4px;
-  gap: 10px;
-  margin: 5px;
-}
-
-.box-reserv {
-  margin-top: 20px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.box-top {
-  cursor: pointer;
-  border: 1px solid grey;
-  box-shadow: 0 0 5px blue;
-  width: 120px;
-  height: 80px;
-}
-
-.box-top:hover {
-  background: #5983d6;
-}
-
-.box-inside {
+.login-box {
+  box-shadow: 0 0 10px #5983d6;
+  width: 400px;
+  height: 250px;
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #5e85b3;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.login-box input {
+  padding: 8px;
+  font-size: 1em;
+}
+
+.login-box button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100px;
+  padding: 8px;
+  background: lightsteelblue;
+  border: 2px lightsteelblue;
+}
+
+.login-box button:hover {
+  background: darkblue;
+  color: white;
+}
+
+.register-box {
+  box-shadow: 0 0 10px #5983d6;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #5e85b3;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.register-box input {
+  padding: 8px;
+  font-size: 1em;
+}
+
+.register-box button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100px;
+  padding: 8px;
+  background: lightsteelblue;
+  border: 2px lightsteelblue;
+}
+
+.register-box button:hover {
+  background: darkblue;
+  color: white;
+}
+
+.error {
+  color: white;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.profile img {
+  width: 300px;
+  object-position: center;
+  object-fit: contain;
+  margin: 40px;
+}
+
+.profile-box button {
+  border-radius: 4px;
+  width: 150px;
 }

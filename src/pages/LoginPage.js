@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = ({ users, setUser }) => {
-  const emailRef = useRef();
+  const usernameRef = useRef();
   const passOneRef = useRef();
 
   const [error, setError] = useState(null);
@@ -12,12 +12,12 @@ const LoginPage = ({ users, setUser }) => {
   function loginUser() {
     setError(null);
     const user = {
-      email: emailRef.current.value,
+      username: usernameRef.current.value,
       password: passOneRef.current.value,
     };
 
-    const myUser = user.find(
-      (x) => x.email === user.email && x.password === user.password
+    const myUser = users.find(
+      (x) => x.username === user.username && x.password === user.password
     );
 
     if (!myUser) return setError("bad user credentials");
@@ -27,11 +27,13 @@ const LoginPage = ({ users, setUser }) => {
   }
 
   return (
-    <div className="d-flex flex-column">
-      <input ref={emailRef} type="text" placeholder="email" />
-      <input ref={passOneRef} type="text" placeholder="password" />
+    <div className="login-box">
+      <div className="d-flex fl-col g20">
+        <input ref={usernameRef} type="text" placeholder="username" />
+        <input ref={passOneRef} type="text" placeholder="password" />
+      </div>
 
-      {error && <h3>{error}</h3>}
+      <div className="error">{error && <h3>{error}</h3>}</div>
 
       <button onClick={loginUser}>Login</button>
     </div>

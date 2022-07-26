@@ -7,45 +7,11 @@ export const userSlice = createSlice({
     value: {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS29WlEjdL3m7gv607vTvEE5HPyrRq8JZcYslOY95v5lTr4nLK8T4h72Pku9rJ1OJ8MddM&usqp=CAU",
-      username: "Andrius",
-      userEmail: "asa@asa.as",
-      location: "Kaunas",
-
-      fieldsNumber: 20,
-      selected: 20,
-
-      posts: [],
     },
   },
-  reducers: {
-    changeImage: (state, action) => {
-      state.value.image = action.payload;
-    },
-    addItem: (state, action) => {
-      state.value.posts.push(action.payload);
-    },
-    deletePost: (state, action) => {
-      state.value.posts = action.payload;
-    },
-    selectCell: (state, action) => {
-      state.value.selected = action.payload;
-    },
-    addReservation: ({ value }, { payload }) => {
-      value.posts[payload.index] = payload.text;
-    },
-    cancelReservation: ({ value }, { payload }) => {
-      value.posts[payload] = "";
-    },
-  },
+  reducers: {},
 });
 
-export const {
-  changeImage,
-  addItem,
-  deletePost,
-  selectCell,
-  addReservation,
-  cancelReservation,
-} = userSlice.actions;
+export const {} = userSlice.actions;
 
 export default userSlice.reducer;
