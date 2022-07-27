@@ -1,12 +1,27 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import mainContext from "../context/mainContext";
 
-const UserCard = ({ users }) => {
+const UserCard = ({ post }) => {
+  const { users } = useContext(mainContext);
+
   const nav = useNavigate();
 
   return (
-    <div className="post" onClick={() => nav("/user/" + users.id)}>
-      <img src={users.image} alt="" />
-      <h3>{users.username}</h3>
+    <div
+      className="card d-flex g20 a-c"
+      onClick={() => nav("/user/" + post.id)}
+    >
+      <div>
+        <img
+          style={{ width: "150px", height: "150px" }}
+          src={post.image}
+          alt="img"
+        />
+      </div>
+      <div>
+        <h3>{post.username}</h3>
+      </div>
     </div>
   );
 };

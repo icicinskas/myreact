@@ -1,29 +1,62 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import mainContext from "../context/mainContext";
 
-const ProfilePage = ({ user, setUser }) => {
+const ProfilePage = () => {
+  const { users, setUsers, currentUser, setCurrentUser } =
+    useContext(mainContext);
+
   const urlRef = useRef();
   const passRef = useRef();
 
-  function setImage() {
-    const myUser = { ...user };
-    myUser.image = urlRef.current.value;
-    setUser(myUser);
+  function updateImage() {
+    const newArr = users.map((x) => {
+      if (x.id === currentUser.id) {
+        return { ...x, image: urlRef.current.value };
+      }
+      return x;
+    });
+
+    setUsers(newArr);
   }
 
-  function setPassword() {
-    const myUser = { ...user };
-    myUser.password = passRef.current.value;
-    setUser(myUser);
+  function setImage() {
+    const myUser = { ...currentUser };
+    myUser.image = urlRef.current.value;
+    setCurrentUser(myUser);
+
+    updateImage();
   }
+
+  function passValidation(password) {
+    return String(password).match(
+      /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[4,20])/
+    );
+  }
+
+  console.log(users);
+  console.log(currentUser);
+
+  function setPassword() {
+    const newArr = users.map((x) => {
+      if (x.id === currentUser.id && !passValidation(passRef.current.value)) {
+        return { ...x, password: passRef.current.value };
+      }
+      return x;
+    });
+
+    setUsers(newArr);
+  }
+
+  console.log(users);
 
   return (
     <div className="profile d-flex g40">
       <div>
-        <img src={user.image} alt="img" />
+        <img src={currentUser.image} alt="img" />
       </div>
       <div className="profile-box d-flex fl-col a-c jc-c g20">
         <div style={{ fontSize: "2em", color: "#551a88" }}>
-          <b>{user.username}</b>
+          <b>{currentUser.username}</b>
         </div>
         <div className="d-flex g40">
           <div className="d-flex fl-col g10 ">
@@ -38,21 +71,7 @@ const ProfilePage = ({ user, setUser }) => {
               style={{ padding: "6px" }}
               ref={passRef}
               type="text"
-              placeholder="Old password"
-            />
-
-            <input
-              style={{ padding: "6px" }}
-              ref={passRef}
-              type="text"
               placeholder="New password"
-            />
-
-            <input
-              style={{ padding: "6px" }}
-              ref={passRef}
-              type="text"
-              placeholder="Confirm new password"
             />
           </div>
           <div className="d-flex fl-col g10">

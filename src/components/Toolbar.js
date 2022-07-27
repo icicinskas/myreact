@@ -1,17 +1,19 @@
-import React from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import mainContext from "../context/mainContext";
 
-const Toolbar = ({ users, setUser }) => {
+const Toolbar = () => {
+  const { currentUser, setCurrentUser } = useContext(mainContext);
   const nav = useNavigate();
 
   function logout() {
-    setUser(null);
+    setCurrentUser(null);
     nav("/");
   }
 
   return (
     <div className="toolbar d-flex g20 space-btw">
-      {!users ? (
+      {!currentUser ? (
         <div className="d-flex g20">
           <Link to="/">Login</Link>
           <Link to="/register">Register</Link>

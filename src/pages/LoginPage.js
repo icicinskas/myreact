@@ -1,7 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import mainContext from "../context/mainContext";
 
-const LoginPage = ({ users, setUser }) => {
+const LoginPage = () => {
+  const { users, setCurrentUser } = useContext(mainContext);
+
   const usernameRef = useRef();
   const passOneRef = useRef();
 
@@ -22,7 +25,7 @@ const LoginPage = ({ users, setUser }) => {
 
     if (!myUser) return setError("bad user credentials");
 
-    setUser(myUser);
+    setCurrentUser(myUser);
     nav("/profile");
   }
 

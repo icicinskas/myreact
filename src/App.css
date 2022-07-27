@@ -239,6 +239,26 @@
 }
 
 .profile-box button {
+  border: 1px solid #5983d6;
+  background: #5983d6;
+  color: white;
   border-radius: 4px;
   width: 150px;
+}
+
+.profile-box button:hover {
+  background: transparent;
+  color: #551a88;
+}
+
+.card {
+  margin: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px blueviolet;
+  padding: 5px;
+}
+
+.card h3 {
+  color: #551a88;
+  padding: 15px;
 }

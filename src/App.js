@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import mainContext from "./context/mainContext";
 
 import AllUsersPage from "./pages/AllUsersPage";
 import ConversationPage from "./pages/ConversationPage";
@@ -13,6 +14,16 @@ import Toolbar from "./components/Toolbar";
 function App() {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
+  const [conversation, setConversation] = useState([]);
+
+  const state = {
+    users,
+    setUsers,
+    currentUser,
+    setCurrentUser,
+    conversation,
+    setConversation,
+  };
 
   function addNewUser(item) {
     const user = {
@@ -20,39 +31,34 @@ function App() {
       password: item.passOne,
       image:
         "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+      id: Date.now(),
     };
 
     setUsers([...users, user]);
   }
 
   return (
-    <div className="app">
-      <div className="container">
-        <BrowserRouter>
-          <Toolbar user={currentUser} setUser={setCurrentUser} />
-          <Routes>
-            <Route
-              path="/"
-              element={<LoginPage setUser={setCurrentUser} users={users} />}
-            />
-            <Route
-              path="/register"
-              element={<RegisterPage addNewUser={addNewUser} users={users} />}
-            />
-            <Route
-              path="/profile"
-              element={
-                <ProfilePage user={currentUser} setUser={setCurrentUser} />
-              }
-            />
+    <mainContext.Provider value={state}>
+      <div className="app">
+        <div className="container">
+          <BrowserRouter>
+            <Toolbar />
+            <Routes>
+              <Route path="/" element={<LoginPage />} />
+              <Route
+                path="/register"
+                element={<RegisterPage addNewUser={addNewUser} />}
+              />
+              <Route path="/profile" element={<ProfilePage />} />
 
-            <Route path="/conversation" element={<ConversationPage />} />
-            <Route path="/allUsers" element={<AllUsersPage users={users} />} />
-            <Route path="/user/:id" element={<UserPage users={users} />} />
-          </Routes>
-        </BrowserRouter>
+              <Route path="/conversation" element={<ConversationPage />} />
+              <Route path="/allUsers" element={<AllUsersPage />} />
+              <Route path="/user/:id" element={<UserPage />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
       </div>
-    </div>
+    </mainContext.Provider>
   );
 }
 

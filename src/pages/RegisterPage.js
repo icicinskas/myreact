@@ -1,7 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import mainContext from "../context/mainContext";
 
-const RegisterPage = ({ users, addNewUser }) => {
+const RegisterPage = ({ addNewUser }) => {
+  const { users } = useContext(mainContext);
+
   const usernameRef = useRef();
   const passOneRef = useRef();
   const passTwoRef = useRef();
@@ -32,9 +35,6 @@ const RegisterPage = ({ users, addNewUser }) => {
       }
     }
 
-    console.log(users.username);
-    console.log(users);
-
     if (user.username.length < 4 || user.username > 20) {
       setError("Username should be min 4 char and max 20 char");
       formValid = false;
@@ -57,10 +57,6 @@ const RegisterPage = ({ users, addNewUser }) => {
     }
 
     if (!formValid) return error;
-
-    console.log(error);
-
-    console.log(formValid);
 
     addNewUser(user);
     nav("/");
