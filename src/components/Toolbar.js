@@ -23,7 +23,7 @@ const Toolbar = () => {
           <div className="d-flex g50">
             <Link to="/profile">Profile</Link>
             <Link to="/allUsers">All posts</Link>
-            <Link to="/conversation">Convarsations</Link>
+            <Link to="/conversation">Conversations</Link>
           </div>
 
           <button onClick={logout}>Logout</button>

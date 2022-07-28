@@ -10,11 +10,13 @@ import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import UserPage from "./pages/UserPage";
 import Toolbar from "./components/Toolbar";
+import SingleChatPage from "./pages/SingleChatPage";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [conversation, setConversation] = useState([]);
+  const [msg, setMsg] = useState([]);
 
   const state = {
     users,
@@ -23,6 +25,8 @@ function App() {
     setCurrentUser,
     conversation,
     setConversation,
+    msg,
+    setMsg,
   };
 
   function addNewUser(item) {
@@ -54,6 +58,7 @@ function App() {
               <Route path="/conversation" element={<ConversationPage />} />
               <Route path="/allUsers" element={<AllUsersPage />} />
               <Route path="/user/:id" element={<UserPage />} />
+              <Route path="/chat/:id" element={<SingleChatPage />} />
             </Routes>
           </BrowserRouter>
         </div>

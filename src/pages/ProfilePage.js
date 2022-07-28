@@ -33,9 +33,6 @@ const ProfilePage = () => {
     );
   }
 
-  console.log(users);
-  console.log(currentUser);
-
   function setPassword() {
     const newArr = users.map((x) => {
       if (x.id === currentUser.id && !passValidation(passRef.current.value)) {
@@ -46,8 +43,6 @@ const ProfilePage = () => {
 
     setUsers(newArr);
   }
-
-  console.log(users);
 
   return (
     <div className="profile d-flex g40">
