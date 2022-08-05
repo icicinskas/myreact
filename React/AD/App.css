@@ -1,0 +1,350 @@
+.d-flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.s-btw {
+  justify-content: space-between;
+}
+
+.s-around {
+  justify-content: space-around;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-e {
+  justify-content: end;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.grow3 {
+  flex: 3;
+}
+
+.g5 {
+  gap: 5px;
+}
+
+.g10 {
+  gap: 10px;
+}
+
+.g15 {
+  gap: 15px;
+}
+
+.g20 {
+  gap: 20px;
+}
+
+.g40 {
+  gap: 40px;
+}
+
+.g50 {
+  gap: 50px;
+}
+
+.m-a {
+  margin: auto;
+}
+
+.m5 {
+  margin: 5px;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mv10 {
+  margin: 0 10px;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.over {
+  overflow: auto;
+}
+
+.pntr {
+  cursor: pointer;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background: lightsteelblue;
+  height: 100vh;
+}
+
+.toolbar {
+  background: #7e9bd6;
+  padding: 10px;
+}
+
+.toolbar a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+.toolbar a:hover {
+  color: rgb(163, 21, 182);
+}
+
+.toolbar-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar button {
+  border: 1px solid #5983d6;
+  border-radius: 4px;
+  background: #5983d6;
+  color: #551a88;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.toolbar button:hover {
+  background: transparent;
+}
+
+.toolbar-main {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.login-box {
+  box-shadow: 0 0 10px #5983d6;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #5e85b3;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.login-box input {
+  padding: 8px;
+  font-size: 1em;
+}
+
+.login-box button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100px;
+  padding: 8px;
+  background: lightsteelblue;
+  border: 2px lightsteelblue;
+}
+
+.login-box button:hover {
+  background: darkblue;
+  color: white;
+}
+
+.register-box {
+  box-shadow: 0 0 10px #5983d6;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #5e85b3;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.register-box input {
+  padding: 8px;
+  font-size: 1em;
+}
+
+.register-box button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100px;
+  padding: 8px;
+  background: lightsteelblue;
+  border: 2px lightsteelblue;
+}
+
+.register-box button:hover {
+  background: darkblue;
+  color: white;
+}
+
+.error {
+  color: white;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.profile img {
+  width: 300px;
+  object-position: center;
+  object-fit: contain;
+  margin: 40px;
+}
+
+.profile-box button {
+  border: 1px solid #5983d6;
+  background: #5983d6;
+  color: white;
+  border-radius: 4px;
+  width: 150px;
+}
+
+.profile-box button:hover {
+  background: transparent;
+  color: #551a88;
+}
+
+.card {
+  margin: 10px;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px blueviolet;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h3 {
+  color: #551a88;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+.user-box {
+  margin: 50px auto;
+}
+
+.user-box h1 {
+  margin-bottom: 50px;
+}
+
+.user-box img {
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px;
+}
+
+.chat-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 8px;
+  background: #eeeeee;
+  height: 60px;
+  width: 90%;
+  margin: 15px;
+  padding: 0 10px;
+}
+
+.chat {
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 3em;
+  margin-bottom: 8px;
+}
+
+.chat-room {
+  width: 95%;
+  height: 80vh;
+  margin: auto;
+}
+
+.enter-box {
+  box-shadow: 0 0 4px;
+  background: #d1d7e2;
+  width: 95%;
+  height: 80vh;
+}
+
+.back-btn {
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  background: #7e9bd6;
+  border-radius: 6px;
+  border: 1px solid #7e9bd6;
+  color: #551a88;
+}
+
+.input-msg input {
+  padding: 8px;
+  width: 75%;
+}
+
+.input-msg button {
+  cursor: pointer;
+  width: 18%;
+  padding: 8px;
+}
