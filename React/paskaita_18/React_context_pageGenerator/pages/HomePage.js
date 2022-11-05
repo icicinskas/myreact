@@ -4,7 +4,7 @@ import Page from "../components/Page";
 
 const HomePage = () => {
   return (
-    <div className="d-flex">
+    <div className="d-flex appa">
       <div className="grow1">
         <ControlPanel />
       </div>
