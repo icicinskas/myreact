@@ -31,7 +31,7 @@ function App() {
 
   return (
     <mainContext.Provider value={values}>
-      <div className="App d-flex main-road">
+      <div className="App d-flex">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
